@@ -1,14 +1,14 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { farmFilterChange } from './reducers/farmFilterReducer'
 import FarmMeasurements from './components/FarmMeasurements'
 import './css/App.css'
 
 const App = () => {
+	const locationFilter = useSelector( state => state.filter )
 	const dispatch = useDispatch()
 
 	const filterFarm = ( event ) => {
-		console.log( 'filter data in filterFarm event handler:', event.target.value )
 		const filter = event.target.value
 		dispatch( farmFilterChange( filter ) )
 	}
@@ -20,8 +20,8 @@ const App = () => {
 			<label htmlFor='farms'>
 				Please select a farm.
 			</label><br></br>
-			<select name='farms' onChange={ filterFarm }>
-				<option defaultValue disabled hidden style={ { display: 'none' } } value=''></option>
+			<select name='farms' onChange={ filterFarm } value={ locationFilter }>
+				<option value='All farms'>All farms</option>
 				<option value='PartialTech Research Farm'>PartialTech Research Farm</option>
 				<option value='Friman Metsola collective'>Friman Metsola collective</option>
 			</select>

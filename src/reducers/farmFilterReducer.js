@@ -5,7 +5,6 @@ const farmFilterReducer = ( state, action ) => {
 			...state,
 			filter: action.filter
 		}
-		console.log( 'newState in farmFilterReducer:', newState )
 		return newState
 	}
 	default:

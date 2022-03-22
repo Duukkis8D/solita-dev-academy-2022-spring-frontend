@@ -1,5 +1,5 @@
 const farmTestData = { 
-	filter: 'ALL',
+	filter: 'All farms',
 	farmMeasurements: [
 		{
 			location: 'PartialTech Research Farm',

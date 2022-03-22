@@ -6,7 +6,7 @@ const FarmMeasurements = () => {
 	const allFarms = useSelector( state => state.farmMeasurements )
 
 	const filterFarms = () => {
-		if( locationFilter === 'ALL' ) {
+		if( locationFilter === 'All farms' ) {
 			return allFarms
 		} else {
 			return allFarms.filter( farmMeasurement => farmMeasurement.location === locationFilter )
