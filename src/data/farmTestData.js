@@ -1,12 +1,13 @@
-export const FarmTestData = () => {
-	[
+const farmTestData = { 
+	filter: 'ALL',
+	farmMeasurements: [
 		{
 			location: 'PartialTech Research Farm',
 			datetime: '2019-01-01T17:59:36.136Z',
 			sensorType: 'temperature',
 			value: -10.2,
 			_id: '61cdea573e778bd87df61593'
-	  },
+		},
 	  {
 			location: 'PartialTech Research Farm',
 			datetime: '2019-01-01T13:53:06.706Z',
@@ -699,6 +700,6 @@ export const FarmTestData = () => {
 			sensorType: 'temperature',
 			value: 1.3,
 			_id: '61cdec3f172bb01849c2a18d'
-	  }
-	]
-}
+	  } ] }
+
+export default farmTestData
